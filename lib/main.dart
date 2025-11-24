@@ -3,13 +3,22 @@
 import 'package:f_dio_provider/providers/post_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-
 import 'services/post_api_service.dart';
 
 
 void main() {
   runApp(const MyApp());
+  /*runApp(
+    MultiProvider(
+      providers: [
+        // Inyectamos el PostProvider en TODA la app
+        ChangeNotifierProvider(
+          create: (_) => PostProvider(PostApiService())..loadPosts(),
+        ),
+      ],
+      child: const MyApp(),
+    ),
+  );*/
 }
 
 class MyApp extends StatelessWidget {
