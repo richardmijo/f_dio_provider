@@ -103,7 +103,8 @@ class PostApiService{
     return Post.fromJson(reponse.data as Map<String, dynamic>);
   }
 
-  Future<void> deltePost(int id) async{
+  Future<void> deletePost(int id) async{
+  
     await _dio.delete('/posts/$id');
   }
 
