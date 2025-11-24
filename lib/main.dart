@@ -16,7 +16,7 @@ void main() {
           create: (_) => PostProvider(PostApiService())..loadPosts(),
         ),
       ],
-      child: const MyApp(),
+      child: MyApp(),
     ),
   );*/
 }
